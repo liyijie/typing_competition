@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require typing_competition
+
+// for more details see: http://emberjs.com/guides/application/
+TypingCompetition = Ember.Application.create();
+
 //= require_tree .
