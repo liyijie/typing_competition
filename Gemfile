@@ -25,7 +25,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', "< 3.0.0"
 
 # ember.js for client
 gem 'ember-rails'
@@ -36,6 +36,9 @@ gem 'newrelic_rpm'
 # authentication use devise
 gem 'devise'
 gem 'devise-i18n'
+
+# admin
+gem 'activeadmin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
