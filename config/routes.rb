@@ -1,9 +1,4 @@
 TypingCompetition::Application.routes.draw do
-  resources :types
-
-
-  resources :sentences
-
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
