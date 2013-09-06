@@ -1,4 +1,7 @@
 TypingCompetition::Application.routes.draw do
+  resources :types
+
+
   resources :sentences
 
 
