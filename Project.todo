@@ -7,8 +7,8 @@ Game:
   ✔ has_many :sentence, through :game_relations @done (13-09-18 13:59)
   ✔ score, user_id, duration_time, word_count @done (13-09-18 13:59)
   score logic:
-  ☐ caculate the word count and duration time for each sentence
-  ☐ caculate the score
+  ✔ caculate the word count and duration time for each sentence @done (13-09-18 22:28)
+  ✔ caculate the score @done (13-09-18 18:38)
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:

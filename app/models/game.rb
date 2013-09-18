@@ -10,8 +10,10 @@ class Game < ActiveRecord::Base
 
   def caculate 
     self.word_count = 0
-    self.sentences.each do |sentence|
+    self.duration_time = 0
+    self.game_relations.each do |sentence|
       self.word_count += sentence.word_count
+      self.duration_time += sentence.duration_time
     end
     self.score = calc_score
   end

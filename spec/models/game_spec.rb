@@ -10,23 +10,33 @@ describe Game do
 
   context "score" do
     let(:game) { Game.new(user_id: 1) } 
+    let(:s1) { Sentence.create word_count: 100 } 
+    let(:s2) { Sentence.create word_count: 200 } 
+    let(:r1) { GameRelation.new word_count: 100 } 
+    let(:r2) { GameRelation.new word_count: 200 } 
+
     it "should get the score by sentence" do
-      s1 = Sentence.new word_count: 100
-      s2 = Sentence.new word_count: 300
-      game.sentences << s1 << s2
-      game.duration_time = 5
+      r1.duration_time = 2
+      r2.duration_time = 3
+      game.game_relations << r1
+      game.game_relations << r2
       game.save
 
+      game.game_relations.size.should == 2
+      game.word_count.should == 300
+      game.duration_time.should == 5
       game.score.should == game.word_count / game.duration_time
     end
 
     it "should get 100 when the score is bigger than 100" do
-      s1 = Sentence.new word_count: 100
-      s2 = Sentence.new word_count: 300
-      game.sentences << s1 << s2
-      game.duration_time = 1
+      r1.duration_time = 1
+      r2.duration_time = 0
+      game.game_relations << r1 << r2
       game.save
 
+      game.game_relations.size.should == 2
+      game.word_count.should == 300
+      game.duration_time.should == 1
       game.score.should == 100      
     end
   end
