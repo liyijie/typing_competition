@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Score:</b>
+  <%= @game.score %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @game.user_id %>
+</p>
+
+<p>
+  <b>Duration time:</b>
+  <%= @game.duration_time %>
+</p>
+
+<p>
+  <b>Word count:</b>
+  <%= @game.word_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

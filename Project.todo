@@ -1,0 +1,11 @@
+Game:
+  Start a new game -- new game
+  Submit a game -- create game
+  view a game score -- read a game
+  ☐ CRUD
+  ☐ REST
+  Model:
+  ☐ belongs_to :user
+  ☐ has_many :sentence, through :game_relations
+  ☐ score, user_id, duration_time, word_count
+  score logic

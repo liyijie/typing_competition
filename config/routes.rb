@@ -1,5 +1,8 @@
 TypingCompetition::Application.routes.draw do
 
+  resources :games
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
