@@ -6,4 +6,9 @@ class Game < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user_id, on: :create, message: "You must login first"
-end
+
+  def score
+    score = self.word_count * 1.0 / self.duration_time
+    score > 100 ? 100 : score
+  end
+end   
