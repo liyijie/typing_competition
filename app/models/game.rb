@@ -6,9 +6,18 @@ class Game < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :user_id, on: :create, message: "You must login first"
+  before_save :caculate
 
-  def score
-    score = self.word_count * 1.0 / self.duration_time
+  def caculate 
+    self.word_count = 0
+    self.sentences.each do |sentence|
+      self.word_count += sentence.word_count
+    end
+    self.score = calc_score
+  end
+
+  def calc_score
+    score = self.word_count / self.duration_time
     score > 100 ? 100 : score
   end
 end   

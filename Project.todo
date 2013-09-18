@@ -2,10 +2,15 @@ Game:
   Start a new game -- new game
   Submit a game -- create game
   view a game score -- read a game
-  ☐ CRUD
-  ☐ REST
   Model:
-  ☐ belongs_to :user
-  ☐ has_many :sentence, through :game_relations
-  ☐ score, user_id, duration_time, word_count
-  score logic
+  ✔ belongs_to :user @done (13-09-18 13:59)
+  ✔ has_many :sentence, through :game_relations @done (13-09-18 13:59)
+  ✔ score, user_id, duration_time, word_count @done (13-09-18 13:59)
+  score logic:
+  ☐ caculate the word count and duration time for each sentence
+  ☐ caculate the score
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ REST @done (13-09-18 13:59) @project(Game)
+ ✔ CRUD @done (13-09-18 13:58) @project(Game)
