@@ -84,6 +84,11 @@ GEM
       handlebars-source (= 1.0.12)
     erubis (2.7.0)
     execjs (2.0.1)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
@@ -195,6 +200,7 @@ DEPENDENCIES
   devise
   devise-i18n
   ember-rails
+  factory_girl_rails (~> 4.0)
   jquery-rails (< 3.0.0)
   newrelic_rpm
   rails (= 3.2.13)
