@@ -21,19 +21,33 @@ describe Sentence do
     sentence.word_count.should == 11
   end
 
-  it "should get a random record" do
-    rand_record = Sentence.rand_record   
-    rand_record.should_not be_new_record
+  context "randome records" do
+    let(:type1) { FactoryGirl.create(:type, lang: "english") } 
+    let(:type2) { FactoryGirl.create(:type, lang: "chinese") } 
+    # let(:en_sentences) { FactoryGirl.create_list(:sentence, 5, type: type1) } 
+    # let(:cn_sentences) { FactoryGirl.create_list(:sentence, 5, type: type2) } 
+    it "should get a random record" do
+      type1.sentences = FactoryGirl.create_list(:sentence, 5)
+      type2.sentences = FactoryGirl.create_list(:sentence, 5)
+      type1.save
+      type2.save
+      rand_record = Sentence.rand_record type1
+      rand_record.should_not be_new_record
+    end
+
+    it "should get random records by size" do
+      type1.sentences = FactoryGirl.create_list(:sentence, 5)
+      type2.sentences = FactoryGirl.create_list(:sentence, 5)
+      rand_records = Sentence.rand_records 5
+      rand_records.size.should == 10
+    end
+
+    it "should get no record when the size is 0" do
+      rand_records = Sentence.rand_records 0
+      rand_records.size.should == 0
+    end
   end
 
-  it "should get random records by size" do
-    rand_records = Sentence.rand_records 5
-    rand_records.size.should == 5
-  end
-
-  it "should get no record when the size is 0" do
-    rand_records = Sentence.rand_records 0
-    rand_records.size.should == 0
-  end
+  
 end
 

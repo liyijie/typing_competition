@@ -4,7 +4,8 @@ Game:
   view a game score -- read a game
   Model:
    ✔ random select sentence from each type @done (13-09-20 18:59)
-   ☐ after init a game, select N sentences, then init the game_relations for the sentences
+   ✔ after init a game, select N sentences, then init the game_relations for the sentences @done (13-09-20 20:30)
+   ☐ gen randome sentence with Types
   score logic:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
