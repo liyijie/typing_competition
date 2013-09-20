@@ -3,14 +3,17 @@ Game:
   Submit a game -- create game
   view a game score -- read a game
   Model:
-  ✔ belongs_to :user @done (13-09-18 13:59)
-  ✔ has_many :sentence, through :game_relations @done (13-09-18 13:59)
-  ✔ score, user_id, duration_time, word_count @done (13-09-18 13:59)
+   ✔ random select sentence from each type @done (13-09-20 18:59)
+   ✔ after init a game, select N sentences, then init the game_relations for the sentences @done (13-09-20 20:30)
+   ☐ gen randome sentence with Types
   score logic:
-  ✔ caculate the word count and duration time for each sentence @done (13-09-18 22:28)
-  ✔ caculate the score @done (13-09-18 18:38)
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ belongs_to :user @done (13-09-18 13:59) @project(Game)
+ ✔ has_many :sentence, through :game_relations @done (13-09-18 13:59) @project(Game)
+ ✔ score, user_id, duration_time, word_count @done (13-09-18 13:59) @project(Game)
+ ✔ caculate the word count and duration time for each sentence @done (13-09-18 22:28) @project(Game)
+ ✔ caculate the score @done (13-09-18 18:38) @project(Game)
  ✔ REST @done (13-09-18 13:59) @project(Game)
  ✔ CRUD @done (13-09-18 13:58) @project(Game)
