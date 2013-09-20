@@ -14,4 +14,16 @@ class Sentence < ActiveRecord::Base
 
     self.word_count = h.scan(/[^\p{P}|\s]+/u).length() + z.length() #选出英文单词并输出字数
   end
+
+  def self.rand_record
+    offset(rand(self.count)).first
+  end
+
+  def self.rand_records size
+    rand_records = []
+    size.times do
+      rand_records << rand_record
+    end
+    rand_records
+  end
 end
