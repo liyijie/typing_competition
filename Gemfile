@@ -8,8 +8,9 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
-group :development, :test do
+group :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers'
   gem "factory_girl_rails", "~> 4.0"
 end
 

@@ -1,15 +1,10 @@
 require 'spec_helper'
 
 describe Game do
-  context "validation" do
-    it "should have user_id" do
-      game = Game.new
-      game.save.should == false
-    end
-  end
+
+  it { should validate_presence_of(:user_id).with_message("You must login first") }
 
   context "score" do
-
     it "should get the score by sentence" do
       game = FactoryGirl.build(:game) do |g|
         g.game_relations << (FactoryGirl.create(:game_relation, word_count: 100, duration_time: 2))

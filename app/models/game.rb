@@ -8,7 +8,7 @@ class Game < ActiveRecord::Base
   validates_presence_of :user_id, on: :create, message: "You must login first"
   before_save :caculate
 
-  def caculate 
+  def caculate
     self.word_count = 0
     self.duration_time = 0
     self.game_relations.each do |sentence|
