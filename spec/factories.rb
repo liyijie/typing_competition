@@ -11,4 +11,8 @@ FactoryGirl.define do
     word_count 100
     duration_time 2
   end
+
+  factory :type do
+    lang "英文"
+  end
 end

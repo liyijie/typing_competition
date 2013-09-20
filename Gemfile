@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+gem 'simplecov', :require => false, :group => :test
+
 group :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'shoulda-matchers'
